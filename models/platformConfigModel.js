@@ -1,4 +1,4 @@
-const db = require('../db/db_config');
+const db = require('../utils/dbConnection');
 
 exports.getAllConfigs = () => {
     return new Promise((resolve, reject) => {

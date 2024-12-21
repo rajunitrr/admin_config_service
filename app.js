@@ -1,5 +1,10 @@
+require('dotenv').config();
+
 const express = require('express');
+const config = require('config');
+
 const platformConfigRoutes = require('./routes/platformConfigRoutes');
+
 //nst table1Routes = require('./routes/table1Routes');
 //nst errorHandler = require('./middlewares/errorHandler');
 
@@ -11,5 +16,6 @@ app.use('/v1/platform/configs', platformConfigRoutes);
 
 //p.use(errorHandler);
 //
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Server running on port 3000`));
+const PORT = process.env.PORT || 3000;
+console.log(`Using port: ${PORT}`);
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
