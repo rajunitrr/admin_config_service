@@ -35,6 +35,16 @@ Body:
 }
 
 
+PUT:
+
+http://localhost:4000/v1/platform/configs/
+
+BODY:
+
+{
+  "f_key": "ENABLE_CAL",
+  "f_value": "NO"
+}
 
 
 
