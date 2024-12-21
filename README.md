@@ -14,7 +14,9 @@ Install nodemon Globally
 
 Table : t_platform_configs  
 JS files :
+
  Module : platformConfigModel.js 
+ 
  Controller :platformConfigController
 
 Apis:
