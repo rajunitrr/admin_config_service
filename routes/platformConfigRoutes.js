@@ -4,5 +4,7 @@ const platformConfigController = require('../controllers/platformConfigControlle
 
 router.get('/', platformConfigController.getAllConfigs);
 router.post('/', platformConfigController.createConfig);
+router.put('/', platformConfigController.updateConfig);
+
 
 module.exports = router;
