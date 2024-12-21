@@ -10,6 +10,8 @@ Install nodemon Globally
 > npm install -g nodemon
 
 ========================================
+
+
 Table : t_platform_configs  
 JS files :
  Module : platformConfigModel.js 
