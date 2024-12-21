@@ -19,10 +19,11 @@ JS files :
  
  Controller :platformConfigController
 
-Apis:
-GET :: http://localhost:4000/v1/platform/configs/
+**Apis:**
 
-POST : http://localhost:4000/v1/platform/configs/
+**GET** :: http://localhost:4000/v1/platform/configs/
+
+**POST** : http://localhost:4000/v1/platform/configs/
 
 
 
@@ -35,7 +36,7 @@ Body:
 }
 
 
-PUT:
+**PUT**:
 
 http://localhost:4000/v1/platform/configs/
 
