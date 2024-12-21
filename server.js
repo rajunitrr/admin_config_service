@@ -1,7 +1,13 @@
 const express = require('express');
-const connection = require('./db_config');  // Import the MySQL connection from db.js
-
+const connection = require('./db/db_config');  // Import the MySQL connection from db.js
+const configRoutes = require('./routes/platform_config_apis');
 const app = express();
+
+// Middleware to parse JSON
+app.use(express.json());
+
+app.use('/v1/platform', configRoutes);
+
 
 // First, try connecting to the MySQL database before starting the server
 connection.connect((err) => {
@@ -20,18 +26,4 @@ connection.connect((err) => {
 // Route to display a simple message
 app.get('/', (req, res) => {
     res.send('Hello World');
-});
-
-// Route to display data from the 'users' table
-app.get('/v1/platform/configs', (req, res) => {
-    connection.query('SELECT * FROM t_platform_config', (err, results) => {
-        if (err) {
-            console.error('Error executing query:', err);
-            res.status(500).send('Error fetching data from the database');
-            return;
-        }
-
-        console.log(results);
-        res.send('Platform configs ' + JSON.stringify(results));
-    });
 });
